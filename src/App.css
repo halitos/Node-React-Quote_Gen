@@ -8,3 +8,40 @@
   margin: 50px;
   padding: 10px;
 }
+
+/** Write your CSS in here **/
+body {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-image: url("https://wallpapercave.com/wp/5KLTq1z.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div {
+  margin-top: 100px;
+  border-radius: 20px;
+  padding: 20px;
+  width: 1000px;
+  /* background-color: rgb(169, 188, 194); */
+}
+
+h1 {
+  color: white;
+}
+h3 {
+  padding: 30px;
+  color: white;
+}
+
+button {
+  background-color: rgb(90, 99, 99);
+  padding: 10px;
+  position: relative;
+  left: 800px;
+  top: 300px;
+  color: white;
+  border-radius: 5px;
+}

@@ -9,13 +9,9 @@ const QuoteDisplay = () => {
       .then((data) => setQuotes(data));
   }, []);
 
-  console.log(quotes);
-
   function pickFromArray(quotes) {
     return quotes[Math.floor(Math.random() * quotes.length)];
   }
-
-  console.log(quotes);
 
   if (!quotes) {
     return "loading...";
@@ -31,11 +27,3 @@ const QuoteDisplay = () => {
 };
 
 export default QuoteDisplay;
-
-// function loadQuote() {
-//   const chosenQuote = pickFromArray(quotes);
-//   quoteLine.innerText = '"' + chosenQuote.quote + '"';
-//   authorLine.innerText = "- " + chosenQuote.author;
-//   containerDiv.appendChild(quoteLine);
-//   containerDiv.appendChild(authorLine);
-// }
