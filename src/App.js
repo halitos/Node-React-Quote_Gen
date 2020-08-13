@@ -4,9 +4,11 @@ import QuoteDisplay from "./QuoteDisplay";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Quote Generator</h1>
-      <QuoteDisplay />
+    <div className="container">
+      <h1 className="header">Quote Generator</h1>
+      <div>
+        <QuoteDisplay />
+      </div>
     </div>
   );
 }

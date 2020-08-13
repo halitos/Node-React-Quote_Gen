@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import NextButton from "./NextButton";
 
 const QuoteDisplay = () => {
   const [quotes, setQuotes] = useState();
+  const [nextQuote, setNextQuote] = useState();
+
   useEffect(() => {
     fetch(`https://halit-quote-server.glitch.me/quotes`)
       .then((res) => res.json())
@@ -13,14 +14,21 @@ const QuoteDisplay = () => {
     return quotes[Math.floor(Math.random() * quotes.length)];
   }
 
+  function pickNext() {
+    setNextQuote(pickFromArray(quotes));
+    console.log(nextQuote);
+  }
+
   if (!quotes) {
-    return "loading...";
+    return <div className="loader"></div>;
   } else {
     return (
-      <div className="quote-container">
-        <p>{pickFromArray(quotes).quote}</p>
-        <h3>{pickFromArray(quotes).author}</h3>
-        <NextButton />
+      <div>
+        <h2>
+          <i>"{pickFromArray(quotes).quote}"</i>
+        </h2>
+        <h4>{pickFromArray(quotes).author}</h4>
+        <button onClick={pickNext}>Next Quote</button>
       </div>
     );
   }
