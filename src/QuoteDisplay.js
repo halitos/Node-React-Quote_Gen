@@ -10,6 +10,8 @@ const QuoteDisplay = () => {
       .then((data) => setQuotes(data));
   }, []);
 
+  let selectedQuote;
+
   function pickFromArray(quotes) {
     return quotes[Math.floor(Math.random() * quotes.length)];
   }
@@ -25,9 +27,9 @@ const QuoteDisplay = () => {
     return (
       <div>
         <h2>
-          <i>"{pickFromArray(quotes).quote}"</i>
+          <i>"{nextQuote ? nextQuote.quote : pickFromArray(quotes).quote}"</i>
         </h2>
-        <h4>{pickFromArray(quotes).author}</h4>
+        <h4>{nextQuote ? nextQuote.author : pickFromArray(quotes).author}</h4>
         <button onClick={pickNext}>Next Quote</button>
       </div>
     );
