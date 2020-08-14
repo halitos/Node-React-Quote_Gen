@@ -10,8 +10,6 @@ const QuoteDisplay = () => {
       .then((data) => setQuotes(data));
   }, []);
 
-  let selectedQuote;
-
   function pickFromArray(quotes) {
     return quotes[Math.floor(Math.random() * quotes.length)];
   }
