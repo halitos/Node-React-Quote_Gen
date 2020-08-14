@@ -20,7 +20,7 @@ const QuoteDisplay = () => {
   }
 
   if (!quotes) {
-    return <div className="loader"></div>;
+    return <div className="lds-dual-ring"></div>;
   } else {
     return (
       <div>
