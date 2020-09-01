@@ -27,7 +27,7 @@ const QuoteDisplay = () => {
         <h2>
           <i>"{nextQuote ? nextQuote.quote : pickFromArray(quotes).quote}"</i>
         </h2>
-        <h4>{nextQuote ? nextQuote.author : pickFromArray(quotes).author}</h4>
+        <h4>- {nextQuote ? nextQuote.author : pickFromArray(quotes).author}</h4>
         <button onClick={pickNext}>Next Quote</button>
       </div>
     );
